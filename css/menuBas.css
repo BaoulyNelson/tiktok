@@ -1,0 +1,50 @@
+/* Styles pour le conteneur du menu */
+.bottom-menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0; /* Ajustement de l'espacement pour les petits écrans */
+  z-index: 1000;
+  overflow-x: hidden;
+}
+
+
+
+/* Styles pour les éléments du menu */
+.menu-item {
+  color: #888;
+  text-decoration: none;
+  font-size: 12px;
+  text-align: center;
+  padding: 8px 10px; /* Espacement des éléments */
+  display: flex;
+  flex-direction: column; /* Affichage en colonne sur les petits écrans */
+  align-items: center;
+
+}
+
+.menu-item i {
+  display: block;
+  margin-bottom: 5px; /* Ajoute un espace entre l'icône et le texte */
+}
+
+/* Média query pour les petits écrans */
+@media screen and (max-width: 600px) {
+  .bottom-menu {
+    padding: 10px 0; /* Ajustement de l'espacement pour les petits écrans */
+  }
+  
+  .menu-item {
+    font-size: 10px; /* Taille de police réduite pour les petits écrans */
+    padding: 5px 10px; /* Ajustement de l'espacement des éléments */
+  }
+  
+  .menu-item i {
+    margin-bottom: 0; /* Réinitialise l'espace sous l'icône */
+  }
+}

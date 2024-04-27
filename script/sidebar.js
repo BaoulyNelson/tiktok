@@ -12,3 +12,4 @@ menuToggle.addEventListener('click', () => {
     menuToggle.innerHTML = '<i class="fas fa-bars"></i>'; // Utiliser l'icône de menu
   }
 });
+

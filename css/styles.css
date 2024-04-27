@@ -1,0 +1,34 @@
+body,
+html {
+  overflow-y: auto;
+  height: 100%;
+
+}
+
+/* Ajouter un espace en bas de la balise main */
+main {
+  margin-bottom: 100px;
+  /* Utilisez la même hauteur que celle définie pour le menu de navigation */
+}
+.video-container {
+  width: 400px; /* Définir la largeur souhaitée */
+  height: 300px; /* Définir la hauteur souhaitée */
+  margin-bottom: 20px; /* Ajouter une marge inférieure pour l'espacement */
+  overflow: hidden; /* Masquer tout contenu débordant de la zone */
+}
+
+.video-container video,
+.video-container iframe {
+  width: 100%; /* Utiliser toute la largeur du conteneur */
+  height: 100%; /* Utiliser toute la hauteur du conteneur */
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: center;
+  /* Aligner horizontalement */
+  align-items: center;
+  /* Aligner verticalement */
+  height: 100vh;
+  /* Hauteur de l'écran */
+}

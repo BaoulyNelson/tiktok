@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Filter Links</title>
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+    /* Styles CSS */
+</style>
+</head>
+<body>
+
+<form id="form"> 
+    <input type="search" id="query" name="q" placeholder="Search..." oninput="filterLinks()">
+</form>
+
+<nav class="bottom-menu">
+    <!-- Icônes du menu bas -->
+    <a href="#" class="menu-item"><i class="fas fa-home"></i>Accueil</a>
+    <a href="#" class="menu-item"><i class="fas fa-compass"></i>Découvrir</a>
+    <a href="#" class="menu-item"><i class="fas fa-plus"></i>Televerser</a>
+    <a href="#" class="menu-item"><i class="fas fa-inbox"></i>Boîte de réception</a>
+    <a href="#" class="menu-item"><i class="fas fa-user"></i>Moi</a>
+</nav>
+
+<nav class="sidebar" id="sidebar">
+    <ul class="list-unstyled">
+       <!-- Éléments de la barre latérale avec icônes -->
+       <li class="sidebar-item active">
+        <a href="#" class="text-dark"><i class="fas fa-user"></i> Voir le profil</a>
+      </li>
+      <li class="sidebar-item">
+        <a href="#" class="text-dark"><i class="fas fa-bell"></i>Notifications</a>
+      </li>
+    </ul>
+</nav>
+
+<script>
+function filterLinks() {
+    var query = document.getElementById('query').value.toLowerCase(); // Récupérer la valeur de la recherche en minuscules
+    var links = document.querySelectorAll('.bottom-menu .menu-item, .sidebar-item'); // Sélectionner tous les liens à filtrer
+
+    var count = 0; // Initialiser le compteur de liens trouvés
+
+    links.forEach(function(link) {
+        var linkText = link.textContent.toLowerCase(); // Récupérer le texte du lien en minuscules
+        if (linkText.includes(query)) { // Vérifier si le texte du lien contient la recherche
+            link.style.display = 'block'; // Afficher le lien
+            count++; // Incrémenter le compteur de liens trouvés
+        } else {
+            link.style.display = 'none'; // Masquer le lien s'il ne correspond pas à la recherche
+        }
+    });
+
+    var message = document.getElementById('message');
+    if (!message) {
+        message = document.createElement('div');
+        message.id = 'message';
+        document.body.appendChild(message);
+    }
+    message.textContent = 'Nombre de liens trouvés : ' + count; // Afficher le nombre de liens trouvés
+}
+</script>
+
+</body>
+</html>

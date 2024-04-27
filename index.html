@@ -11,13 +11,25 @@
   <!-- Inclure Font Awesome pour les icônes -->
  
     
-    <link rel="stylesheet" href="styles.css"> <!-- Lien vers ton fichier CSS -->
+    <link rel="stylesheet" href="css/styles.css"> 
+    <link rel="stylesheet" href="css/recherche.css">
+    <link rel="stylesheet" href="css/menuBas.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/toggle.css">
 </head>
 <body>
-
+<header>
+     
   <!-- Bouton de menu -->
   <button id="menu-toggle"><i class="fas fa-bars"></i></button>
+</header>
   
+<form id="form"> 
+    <input type="search" id="query" name="q" placeholder="Search..." oninput="filterLinks()">
+    <div id="message"></div>
+</form>
+
+
   <!-- Panneau latéral -->
   <nav class="sidebar" id="sidebar">
     <ul class="list-unstyled">
@@ -25,8 +37,7 @@
        <li class="sidebar-item active">
         <a href="#" class="text-dark"><i class="fas fa-user"></i> Voir le profil</a>
       </li>
-      <li class="sidebar-item">
-      <a href="#" class="text-dark"><i class="fas fa-search"></i>Rechercher</a></li>
+   
 
       <li class="sidebar-item">
         <a href="#" class="text-dark"><i class="fas fa-bell"></i>Notifications</a>
@@ -68,17 +79,18 @@
     
     <div class="container-fluid">
         <div class="video-container">
-          <video width="640" height="360" controls>
+          <video controls>
             <source src="chemin_de_la_video.mp4" type="video/mp4">
             Votre navigateur ne prend pas en charge la lecture de vidéos.
           </video>
         </div>
       </div>
       
-
-  <div class="video-container">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-</div>
+      <div class="container-fluid">
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
 
 </main>
     <nav class="bottom-menu">
@@ -97,7 +109,10 @@
             </a>
             <a href="#" class="menu-item"><i class="fas fa-user"></i>Moi</a>
     </nav>
-    <script src="script.js"></script> <!-- Lien vers ton fichier JavaScript -->
+    <script src="script/menuBas.js"></script>
+    <script src="script/sidebar.js"></script>
+    <script src="script/script.js"></script> 
+    <script src="script/recherche.js"></script> 
 <!-- Inclure Bootstrap JS (si nécessaire) -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
