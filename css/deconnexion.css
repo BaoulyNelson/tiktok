@@ -1,0 +1,5 @@
+ /* Styles pour les boutons radio */
+ .confirmation-options {
+    display: none; /* Caché par défaut */
+    margin-top: 10px;
+}

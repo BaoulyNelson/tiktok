@@ -21,3 +21,13 @@ function filterLinks() {
         message.textContent = ''; // Effacer le message si le champ de recherche est vide
     }
 }
+
+document.getElementById('search-icon').addEventListener('click', function() {
+  var searchForm = document.getElementById('form');
+  if (searchForm.style.display === 'none' || searchForm.style.display === '') {
+      searchForm.style.display = 'block';
+  } else {
+      searchForm.style.display = 'none';
+  }
+});
+

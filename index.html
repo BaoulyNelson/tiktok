@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulation de menu bas</title>
+    <title>Baouly Tiktok APP</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-......" crossorigin="anonymous"> <!-- Lien vers Font Awesome -->
  
      <!-- Inclure Bootstrap CSS -->
@@ -15,19 +15,24 @@
     <link rel="stylesheet" href="css/recherche.css">
     <link rel="stylesheet" href="css/menuBas.css">
     <link rel="stylesheet" href="css/sidebar.css">
-    <link rel="stylesheet" href="css/toggle.css">
+    <link rel="stylesheet" href="css/deconnexion.css">
+    <link rel="stylesheet" href="css/nav.css">
 </head>
 <body>
-<header>
-     
-  <!-- Bouton de menu -->
-  <button id="menu-toggle"><i class="fas fa-bars"></i></button>
-</header>
+
+    <nav class="navbar">
+          <!-- Icône TikTok dans un cercle avec une bordure noire -->
+  <i class="fab fa-tiktok tiktok-icon"></i>
+        <form id="form" class="search-form">
+            <input type="search" id="query" name="q" placeholder="Search..." oninput="filterLinks()">
+            <div id="message"></div>
+        </form>
+        <i class="search-icon fas fa-search" id="search-icon"></i>
+        
+        
+      </nav>
+      
   
-<form id="form"> 
-    <input type="search" id="query" name="q" placeholder="Search..." oninput="filterLinks()">
-    <div id="message"></div>
-</form>
 
 
   <!-- Panneau latéral -->
@@ -35,12 +40,12 @@
     <ul class="list-unstyled">
        <!-- Éléments de la barre latérale avec icônes -->
        <li class="sidebar-item active">
-        <a href="#" class="text-dark"><i class="fas fa-user"></i> Voir le profil</a>
+        <a href="https://web.facebook.com/" class="text-dark"><i class="fas fa-user"></i> Voir le profil</a>
       </li>
    
 
       <li class="sidebar-item">
-        <a href="#" class="text-dark"><i class="fas fa-bell"></i>Notifications</a>
+        <a href="https://web.facebook.com/" class="text-dark"><i class="fas fa-bell"></i>Notifications</a>
     </li>
       <li class="sidebar-item">
         <a href="#" class="text-dark"><i class="fas fa-star"></i> Favoris</a>
@@ -49,17 +54,20 @@
         <a href="#" class="text-dark"><i class="fas fa-coins"></i> Obtenir des Pièces</a>
       </li>
       <li class="sidebar-item">
-        <a href="#" class="text-dark"><i class="fas fa-video"></i> LIVE Studio</a>
+        <a href="video/slameur cyndy.mp4" class="text-dark" onclick="showLiveStream()"><i class="fas fa-video"></i> LIVE Studio</a>
+    </li>
+      <li class="sidebar-item">
+        <a href="video/Comment Créer un Site Web avec WordPress (2024).mp4" class="text-dark" onclick="showLiveStream()"><i class="fas fa-home"></i> Centre LIVE</a>
       </li>
       <li class="sidebar-item">
-        <a href="#" class="text-dark"><i class="fas fa-home"></i> Centre LIVE</a>
+        <a href="mdp_oublie.html" class="text-dark"><i class="fas fa-cog"></i> Paramètres</a>
       </li>
       <li class="sidebar-item">
-        <a href="#" class="text-dark"><i class="fas fa-cog"></i> Paramètres</a>
-      </li>
-      <li class="sidebar-item">
-        <a href="#" class="text-dark"><i class="fas fa-language"></i> Français</a>
-      </li>
+        <a href="#" class="text-dark" onclick="translate('fr')"><i class="fas fa-language"></i> Français</a>
+    </li>
+    <li class="sidebar-item">
+        <a href="#" class="text-dark" onclick="translate('en')"><i class="fas fa-language"></i> Anglais</a>
+    </li>
       <li class="sidebar-item">
         <a href="#" class="text-dark"><i class="fas fa-comment"></i> Commentaires et assistance</a>
       </li>
@@ -70,17 +78,26 @@
         <a href="#" class="text-dark"><i class="fas fa-moon"></i> Mode sombre</a>
       </li>
       <li class="sidebar-item">
-        <a href="#" class="text-dark"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
-      </li>
+        <a href="login.html" class="text-dark" id="logout"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+        <!-- Options de confirmation (boutons radio) -->
+        <div class="confirmation-options">
+            <label for="confirm-yes"><input type="radio" name="confirmation" id="confirm-yes"> Oui</label>
+            <label for="confirm-no"><input type="radio" name="confirmation" id="confirm-no"> Non</label>
+            <button id="confirm-button">Confirmer</button>
+        </div>
+    </li>
     </ul>
   </nav>
 
+  <div id="videoContainer" style="margin-left: 270px; padding: 20px;">
+    <!-- Placeholder for video stream -->
+</div>
 <main>
     
     <div class="container-fluid">
         <div class="video-container">
           <video controls>
-            <source src="chemin_de_la_video.mp4" type="video/mp4">
+            <source src="video/Cisco Cybersecurity Essentials 1.5.3.5 Creating a Cyber World – Packet Tracer demonstration.mp4" type="video/mp4">
             Votre navigateur ne prend pas en charge la lecture de vidéos.
           </video>
         </div>
@@ -88,7 +105,42 @@
       
       <div class="container-fluid">
         <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+          <iframe src="video/Comment Créer un Site Web avec WordPress (2024).mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="video-container">
+          <iframe src="video/Comment télécharger et installer Android Studio et le SDK.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="video-container">
+          <iframe src="video/CREE UNE CARTE DE VISITE DESIGN SUR ILLUSTRATOR ( TUTO POUR DÉBUTANTS).mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="video-container">
+          <iframe src="video/Installation de Debian11 sans interface graphique pour un serveur (VirtualBox).mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="video-container">
+          <iframe src="video/Installer Debian 12 sur VirtualBox.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="video-container">
+          <iframe src="video/slameur cyndy.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="video-container">
+          <iframe src="video/Packet Tracer Activity 1 - Creating a Cyber World.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/live/MY6A-kDqFOk?feature=shared.mp4" frameborder="0" allowfullscreen></iframe>
         </div>
       </div>
 
@@ -96,18 +148,24 @@
     <nav class="bottom-menu">
         <!-- Icônes du menu bas -->
         <a href="#" class="menu-item"><i class="fas fa-home"></i>Accueil</a>
-            <a href="#" class="menu-item">
+
+            <a href="https://www.tiktok.com/" class="menu-item">
               <i class="fas fa-compass"></i>
               Découvrir
             </a>
 
-            <a href="#" class="menu-item"><i class="fas fa-plus"></i>Televerser</a>
+            <form id="file-upload-form" style="display: none;">
+                <input type="file" id="file-input" style="display: none;">
+              </form>
+              
+              <a href="#" class="menu-item" onclick="document.getElementById('file-input').click();"><i class="fas fa-plus"></i>Téléverser</a>
+              
 
-            <a href="#" class="menu-item">
+            <a href="elconquistadorbaoulyn@gmail.com" class="menu-item">
               <i class="fas fa-inbox"></i>
               Boîte de réception
             </a>
-            <a href="#" class="menu-item"><i class="fas fa-user"></i>Moi</a>
+            <a href="https://elconquistadorbaoulyn-com.onrender.com" class="menu-item"><i class="fas fa-user"></i>Moi</a>
     </nav>
     <script src="script/menuBas.js"></script>
     <script src="script/sidebar.js"></script>

@@ -9,7 +9,16 @@ form {
     justify-content: center; /* Ajout de la propriété pour centrer horizontalement */
     margin: 0 auto; /* Pour centrer le formulaire horizontalement */
 }
+#message{
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0; /* Ajustez si nécessaire pour le positionnement horizontal */
+    background-color: black; /* Couleur de fond du message */
+    border-top: 1px solid gray; /* Ligne séparatrice en haut du message */
+    text-align: center; /* Centre le texte horizontalement */
 
+}
 input {
     all: unset;
     font: 16px system-ui;
@@ -23,3 +32,46 @@ input {
     color: #fff;
     opacity: 0.7; 
 }
+
+/* Style pour les grands écrans */
+@media screen and (min-width: 769px) {
+    .search-form {
+        display: block; /* Affiche le formulaire de recherche */
+    }
+    
+    .search-icon {
+        display: none; /* Masque l'icône de recherche */
+    }
+}
+
+/* Style pour les petits écrans */
+@media screen and (max-width: 768px) {
+    .search-form {
+        display: none; /* Masque le formulaire de recherche */
+    }
+    
+    .search-icon {
+        display: inline-block; /* Affiche l'icône de recherche */
+        cursor: pointer; /* Curseur pointer pour indiquer que l'icône est cliquable */
+        text-align: center; /* Centre l'icône horizontalement */
+    }
+    /* Style pour l'icône de recherche */
+.search-icon {
+    justify-content: center; /* Centrage horizontal */
+    align-items: center; /* Centrage vertical */
+    text-align: center;
+    font-size: 24px; /* Taille de la police de l'icône */
+    color: #333; /* Couleur de l'icône */
+    transition: color 0.3s ease; /* Transition fluide de la couleur */
+}
+
+/* Style pour l'icône de recherche au survol */
+.search-icon:hover {
+    color: #007bff; /* Couleur de l'icône au survol */
+}
+}
+
+
+
+
+

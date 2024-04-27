@@ -1,0 +1,30 @@
+.navbar {
+    background-color: gray; /* Couleur de fond de la barre de navigation */
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+   
+}
+/* Styles pour l'icône TikTok */
+.tiktok-icon {
+    font-size: 8vw; /* Taille de police responsive en fonction de la largeur de l'écran */
+    color: red; /* Couleur de l'icône */
+    border: 2px solid white; /* Bordure noire autour de l'icône */
+    border-radius: 50%; /* Pour créer un cercle */
+    padding: 4vw; /* Espace autour de l'icône en fonction de la largeur de l'écran */
+
+    /* Styles pour rendre l'icône TikTok centrée horizontalement et verticalement */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Media query pour ajuster la taille de l'icône TikTok sur les petits écrans */
+@media (max-width: 600px) {
+    .tiktok-icon {
+        font-size: 12vw; /* Taille de police plus grande pour les petits écrans */
+        padding: 6vw; /* Espace autour de l'icône pour les petits écrans */
+    }
+}
