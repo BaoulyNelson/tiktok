@@ -1,5 +1,5 @@
-form {
-    background-color: #227dea;
+form {    
+    background-color: #222222; /* Gris foncé */
     width: 300px;
     height: 44px;
     border-radius: 5px;
@@ -8,14 +8,14 @@ form {
     align-items: center;
     justify-content: center; /* Ajout de la propriété pour centrer horizontalement */
     margin: 0 auto; /* Pour centrer le formulaire horizontalement */
+    margin-right: 20px; /* Décalage de 20 pixels vers la droite */
 }
+
+
 #message{
-    color: #fff;
-    position: absolute;
+    color: black;
     bottom: 0;
     left: 0; /* Ajustez si nécessaire pour le positionnement horizontal */
-    background-color: black; /* Couleur de fond du message */
-    border-top: 1px solid gray; /* Ligne séparatrice en haut du message */
     text-align: center; /* Centre le texte horizontalement */
 
 }
@@ -55,8 +55,11 @@ input {
         cursor: pointer; /* Curseur pointer pour indiquer que l'icône est cliquable */
         text-align: center; /* Centre l'icône horizontalement */
     }
-    /* Style pour l'icône de recherche */
-.search-icon {
+
+ 
+}
+   /* Style pour l'icône de recherche */
+   .search-icon {
     justify-content: center; /* Centrage horizontal */
     align-items: center; /* Centrage vertical */
     text-align: center;
@@ -68,7 +71,6 @@ input {
 /* Style pour l'icône de recherche au survol */
 .search-icon:hover {
     color: #007bff; /* Couleur de l'icône au survol */
-}
 }
 
 

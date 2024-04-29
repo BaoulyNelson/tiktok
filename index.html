@@ -21,7 +21,7 @@
 <body>
 
     <nav class="navbar">
-          <!-- Icône TikTok dans un cercle avec une bordure noire -->
+    <!-- Icône TikTok dans un cercle avec une bordure noire -->
   <i class="fab fa-tiktok tiktok-icon"></i>
         <form id="form" class="search-form">
             <input type="search" id="query" name="q" placeholder="Search..." oninput="filterLinks()">
@@ -54,10 +54,10 @@
         <a href="#" class="text-dark"><i class="fas fa-coins"></i> Obtenir des Pièces</a>
       </li>
       <li class="sidebar-item">
-        <a href="video/slameur cyndy.mp4" class="text-dark" onclick="showLiveStream()"><i class="fas fa-video"></i> LIVE Studio</a>
-    </li>
+        <a href="#" id="live-studio-link"><i class="fas fa-video"></i> LIVE Studio</a>
+      </li>
       <li class="sidebar-item">
-        <a href="video/Comment Créer un Site Web avec WordPress (2024).mp4" class="text-dark" onclick="showLiveStream()"><i class="fas fa-home"></i> Centre LIVE</a>
+        <a href="#" id="centre-live-link"><i class="fas fa-home"></i> Centre LIVE</a>
       </li>
       <li class="sidebar-item">
         <a href="mdp_oublie.html" class="text-dark"><i class="fas fa-cog"></i> Paramètres</a>
@@ -89,61 +89,85 @@
     </ul>
   </nav>
 
-  <div id="videoContainer" style="margin-left: 270px; padding: 20px;">
-    <!-- Placeholder for video stream -->
-</div>
+ 
 <main>
-    
-    <div class="container-fluid">
-        <div class="video-container">
-          <video controls>
-            <source src="video/Cisco Cybersecurity Essentials 1.5.3.5 Creating a Cyber World – Packet Tracer demonstration.mp4" type="video/mp4">
-            Votre navigateur ne prend pas en charge la lecture de vidéos.
-          </video>
-        </div>
-      </div>
-      
-      <div class="container-fluid">
-        <div class="video-container">
-          <iframe src="video/Comment Créer un Site Web avec WordPress (2024).mp4" frameborder="0" allowfullscreen></iframe>
-        </div>
-      </div>
-      <div class="container-fluid">
-        <div class="video-container">
-          <iframe src="video/Comment télécharger et installer Android Studio et le SDK.mp4" frameborder="0" allowfullscreen></iframe>
-        </div>
-      </div>
-      <div class="container-fluid">
-        <div class="video-container">
-          <iframe src="video/CREE UNE CARTE DE VISITE DESIGN SUR ILLUSTRATOR ( TUTO POUR DÉBUTANTS).mp4" frameborder="0" allowfullscreen></iframe>
-        </div>
-      </div>
-      <div class="container-fluid">
-        <div class="video-container">
-          <iframe src="video/Installation de Debian11 sans interface graphique pour un serveur (VirtualBox).mp4" frameborder="0" allowfullscreen></iframe>
-        </div>
-      </div>
-      <div class="container-fluid">
-        <div class="video-container">
-          <iframe src="video/Installer Debian 12 sur VirtualBox.mp4" frameborder="0" allowfullscreen></iframe>
-        </div>
-      </div>
-      <div class="container-fluid">
-        <div class="video-container">
-          <iframe src="video/slameur cyndy.mp4" frameborder="0" allowfullscreen></iframe>
-        </div>
-      </div>
-      <div class="container-fluid">
-        <div class="video-container">
-          <iframe src="video/Packet Tracer Activity 1 - Creating a Cyber World.mp4" frameborder="0" allowfullscreen></iframe>
-        </div>
-      </div>
-      <div class="container-fluid">
-        <div class="video-container">
-          <iframe src="https://www.youtube.com/live/MY6A-kDqFOk?feature=shared.mp4" frameborder="0" allowfullscreen></iframe>
-        </div>
-      </div>
+  <div class="container-fluid">
+    <div class="video-container">
+    <h2 class="video-title">Titre de la vidéo</h2>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/PdlKhv8Fxt4" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
 
+  <div class="container-fluid">
+ <!-- Conteneur pour afficher la vidéo -->
+<div id="video-container">
+  <h2>Titre de la vidéo</h2>
+  <video controls autoplay>
+    <source src="#" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+</div>
+
+
+  <div class="container-fluid">
+    <div class="video-container">
+    <h2 class="video-title">Titre de la vidéo</h2>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/Q03h-dHpDf8" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+  
+  <div class="container-fluid">
+    <div class="video-container">
+    <h2 class="video-title">Titre de la vidéo</h2>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/mPJ408jcX20" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+  
+  <div class="container-fluid">
+    <div class="video-container">
+    <h2 class="video-title">Titre de la vidéo</h2>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/TUe1juwq1IE" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+  
+  <div class="container-fluid">
+    <div class="video-container">
+    <h2 class="video-title">Titre de la vidéo</h2>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/SzU97FvavsY" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+  
+  <div class="container-fluid">
+    <div class="video-container">
+    <h2 class="video-title">Titre de la vidéo</h2>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/olMyEusUuNY" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+  
+  <div class="container-fluid">
+    <div class="video-container">
+    <h2 class="video-title">Titre de la vidéo</h2>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/PyptiYTljjA" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="video-container">
+    <h2 class="video-title">Titre de la vidéo</h2>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/Ey8SGtSQ9-M" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="video-container">
+    <h2 class="video-title">Titre de la vidéo</h2>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/HyU4qf79RAs" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+  
+ 
+  
 </main>
     <nav class="bottom-menu">
         <!-- Icônes du menu bas -->

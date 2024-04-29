@@ -1,20 +1,36 @@
+/* Réinitialisation des marges par défaut */
 body,
 html {
-  overflow-y: auto;
-  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
+/* Ajustement de la hauteur pour occuper toute la fenêtre */
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%; /* Permet de s'assurer que le corps s'étend au moins sur toute la hauteur de la fenêtre */
+  overflow-y: auto; /* Ajoute une barre de défilement verticale si nécessaire */
+  font-family: Arial, sans-serif; /* Choix d'une police par défaut pour le texte */
+  background-color: #f8f8f8; /* Couleur de fond pour le corps */
+  color: #333; /* Couleur de texte par défaut */
 }
 
 /* Ajouter un espace en bas de la balise main */
 main {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   /* Utilisez la même hauteur que celle définie pour le menu de navigation */
 }
+
+
 .video-container {
   width: 400px; /* Définir la largeur souhaitée */
   height: 300px; /* Définir la hauteur souhaitée */
   margin-bottom: 20px; /* Ajouter une marge inférieure pour l'espacement */
   overflow: hidden; /* Masquer tout contenu débordant de la zone */
+ 
 }
 
 .video-container video,
@@ -31,4 +47,32 @@ main {
   /* Aligner verticalement */
   height: 100vh;
   /* Hauteur de l'écran */
+}
+
+.video-container {
+  text-align: center;
+}
+
+.video-title {
+  margin-top: 10px; /* Ajoute un peu d'espace entre la vidéo et le titre */
+  font-size: 24px; /* Taille de la police */
+  color: #333; /* Couleur du texte */
+  text-align: center; /* Centrer le texte horizontalement */
+  margin-bottom: 20px; /* Espace en bas du titre */
+  
+}
+
+#video-container {
+  display: none;
+  text-align: center;
+  width: 400px; /* Définir la largeur souhaitée */
+  height: 300px; /* Définir la hauteur souhaitée */
+  margin-bottom: 20px; /* Ajouter une marge inférieure pour l'espacement */
+  overflow: hidden; /* Masquer tout contenu débordant de la zone */
+}
+
+video {
+  width: 100%; /* Utiliser toute la largeur du conteneur */
+  height: 100%; /* Utiliser toute la hauteur du conteneur */
+  display: inline-block;
 }

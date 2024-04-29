@@ -4,8 +4,8 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #fff;
-  border-top: 1px solid #ccc;
+  background-color: white;
+  border-top: 1px solid whitesmoke;
   display: flex;
   justify-content: space-around;
   padding: 10px 0; /* Ajustement de l'espacement pour les petits écrans */
@@ -17,7 +17,7 @@
 
 /* Styles pour les éléments du menu */
 .menu-item {
-  color: #888;
+  color: black;
   text-decoration: none;
   font-size: 12px;
   text-align: center;
@@ -31,6 +31,7 @@
 .menu-item i {
   display: block;
   margin-bottom: 5px; /* Ajoute un espace entre l'icône et le texte */
+  color: black;
 }
 
 /* Média query pour les petits écrans */
@@ -42,9 +43,20 @@
   .menu-item {
     font-size: 10px; /* Taille de police réduite pour les petits écrans */
     padding: 5px 10px; /* Ajustement de l'espacement des éléments */
+  
   }
   
   .menu-item i {
     margin-bottom: 0; /* Réinitialise l'espace sous l'icône */
   }
 }
+
+.bottom-menu a {
+  text-decoration: none; /* Retire le soulignement des liens */
+  transition: color 0.3s ease; /* Ajoute une transition sur la couleur */
+}
+
+.bottom-menu a:hover {
+  color: #ff0000; /* Change la couleur du texte au survol */
+}
+

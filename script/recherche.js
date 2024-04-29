@@ -23,11 +23,13 @@ function filterLinks() {
 }
 
 document.getElementById('search-icon').addEventListener('click', function() {
-  var searchForm = document.getElementById('form');
-  if (searchForm.style.display === 'none' || searchForm.style.display === '') {
-      searchForm.style.display = 'block';
-  } else {
-      searchForm.style.display = 'none';
-  }
-});
+    var searchForm = document.getElementById('form');
+    if (searchForm.style.display === 'none' || searchForm.style.display === '') {
+        searchForm.style.display = 'block';
+        document.getElementById('query').focus(); // Définit le focus sur l'élément d'entrée
+    } else {
+        searchForm.style.display = 'none';
+    }
+  });
+  
 
