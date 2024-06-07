@@ -1,16 +1,32 @@
+/* Styles de base */
 form {    
-    background-color: #222222; /* Gris foncé */
-    width: 300px;
-    height: 44px;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center; /* Ajout de la propriété pour centrer horizontalement */
-    margin: 0 auto; /* Pour centrer le formulaire horizontalement */
-    margin-right: 20px; /* Décalage de 20 pixels vers la droite */
+    width: 100%; /* Utilisez 100% de la largeur disponible */
+    max-width: 300px; /* Largeur maximale pour éviter l'étirement excessif */
+    margin: 0 auto; /* Centrer le formulaire horizontalement */
+    padding: 10px; /* Ajouter de l'espace intérieur pour un meilleur espacement */
+    box-sizing: border-box; /* Inclure le padding dans le calcul de la largeur */
 }
 
+input {
+    all: unset;
+    font: 16px system-ui;
+    color: black;
+    width: 100%; /* Utiliser toute la largeur disponible */
+    padding: 12px 20px; /* Espacement interne ajusté */
+    border-radius: 25px;
+    outline: none;
+    background-color: var(--white-color);
+    border: 1px solid var(--grey-color-light);
+    box-sizing: border-box; /* Inclure le padding dans le calcul de la largeur */
+}
+
+/* Media queries pour rendre le formulaire plus adaptatif */
+@media (max-width: 600px) {
+    /* Pour les écrans plus petits, ajuster la largeur du formulaire */
+    form {
+        max-width: 50%; /* Utiliser toute la largeur disponible */
+    }
+}
 
 #message{
     color: black;
@@ -19,17 +35,10 @@ form {
     text-align: center; /* Centre le texte horizontalement */
 
 }
-input {
-    all: unset;
-    font: 16px system-ui;
-    color: #fff;
-    height: 100%;
-    width: calc(100% - 40px); /* Ajustement de la largeur pour tenir compte du bouton */
-    padding: 6px 10px;
-}
+
 
 ::placeholder {
-    color: #fff;
+    color: black;
     opacity: 0.7; 
 }
 

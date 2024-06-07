@@ -1,42 +1,41 @@
-
 /* Styles CSS pour le panneau latéral */
 .sidebar {
   position: fixed;
   top: 0;
-  bottom: 0;
   left: -250px;
-  z-index: 100;
+  z-index: 1000;
   width: 250px; /* Largeur fixe du panneau latéral */
   background-color: #f8f9fa;
   border-right: 1px solid black;
   overflow-y: auto;
   transition: left 0.3s; /* Ajouter une transition fluide */
-  height: 100vh; /* Utilisation de la hauteur totale de l'écran */
-  margin-bottom: 30px; /* Ajustez la valeur selon vos besoins */
+  height: calc(100vh - 60px); /* Utilisation de la hauteur totale de l'écran moins la hauteur du menu */
+}
 
+ /* Styles pour les éléments du sidebar */
+ .sidebar-item {
+  padding: 10px 20px;
+  margin: 10px 0;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sidebar-item:hover {
+  background-color: #007bff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .sidebar-item a {
-  text-decoration: none; /* Retirer le soulignement */
-  color: black; /* Changer la couleur en noir */
-  transition: color 0.3s ease; /* Ajoute une transition sur la couleur */
-
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease;
+  display: block;
 }
+
 .sidebar-item a:hover {
-  color: #ff0000; /* Change la couleur du texte au survol */
-}
-
-/* Styles pour les éléments du sidebar */
-.sidebar-item {
-  padding: 8px 20px;
-  z-index: 99;
-
- }
-
-
-/* Ajoute de l'espace en bas du dernier élément du sidebar */
-.sidebar-item:last-child {
-  margin-bottom: 100px; /* Ajoutez la marge selon vos besoins */
+  color: #ffffff;
 }
 
   

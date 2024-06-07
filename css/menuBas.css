@@ -1,18 +1,21 @@
+
 /* Styles pour le conteneur du menu */
 .bottom-menu {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: white;
+  height: 60px; /* Hauteur fixe du menu de navigation en bas */
   border-top: 1px solid whitesmoke;
   display: flex;
   justify-content: space-around;
   padding: 10px 0; /* Ajustement de l'espacement pour les petits écrans */
   z-index: 1000;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
+  background-color: var(--white-color);
+  align-items: center;
+  box-shadow: 0 0 2px var(--grey-color-light);
 }
-
 
 
 /* Styles pour les éléments du menu */
@@ -52,11 +55,19 @@
 }
 
 .bottom-menu a {
+  font-weight: bold;
   text-decoration: none; /* Retire le soulignement des liens */
-  transition: color 0.3s ease; /* Ajoute une transition sur la couleur */
+  color: black; /* Couleur du texte par défaut */
+  margin: 0 15px; /* Espacement entre les éléments */
+  padding: 10px 20px; /* Espacement interne des éléments */
+  border-radius: 5px; /* Arrondir les coins des éléments */
+  transition: all 0.3s ease; /* Ajoute une transition pour tous les changements */
+  position: relative; /* Pour positionner le pseudo-élément */
+  overflow: hidden; /* Cache les débordements pour les animations */
 }
 
 .bottom-menu a:hover {
-  color: #ff0000; /* Change la couleur du texte au survol */
+  color: #fff; /* Couleur du texte au survol */
+  background-color: #ff0000; /* Couleur de fond au survol */
+  transform: scale(1.1); /* Agrandir légèrement l'élément au survol */
 }
-

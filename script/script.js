@@ -26,3 +26,45 @@ centreLiveLink.addEventListener('click', function(e) {
   const video = videoContainer.querySelector('video');
   video.src = videoSource;
 });
+
+const darkLight = document.querySelector("#darkLight");
+const body = document.querySelector("body");
+
+
+darkLight.addEventListener("click", () => {
+  body.classList.toggle("dark");
+  if (body.classList.contains("dark")) {
+    document.setI
+    darkLight.classList.replace("bx-sun", "bx-moon");
+  } else {
+    darkLight.classList.replace("bx-moon", "bx-sun");
+  }
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const navbar = document.querySelector('.navbar');
+  const items = navbar.children.length;
+
+  // Ajuste le padding en fonction du nombre d'éléments
+  const padding = Math.max(1, 5 - items) + 'vw';
+  navbar.style.padding = `${padding} 3vw`;
+});
+
+
+var lastScrollTop = 0;
+
+window.addEventListener("scroll", function () {
+    var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop) {
+        // Scroll vers le bas
+        document.querySelector('.bottom-menu').style.transform = 'translateY(100%)';
+    } else {
+        // Scroll vers le haut
+        document.querySelector('.bottom-menu').style.transform = 'translateY(0)';
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Pour prendre en compte le défilement vers le haut
+}, false);
+

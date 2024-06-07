@@ -1,42 +1,58 @@
 .navbar {
-    background-color: inherit; /* Couleur de fond de la barre de navigation */
-    margin: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    border-bottom: 1px solid grey;
-    margin-top: 0; /* Supprime l'espace en haut de la barre de navigation */
-    margin-bottom: 0; /* Supprime l'espace en bas de la barre de navigation */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  background-color: var(--white-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1vw 3vw;
+  /* Utilisation des unités relatives pour un padding responsive */
+  z-index: 1000;
+  box-shadow: 0 0 2px var(--grey-color-light);
+  box-sizing: border-box;
+  /* Inclut le padding dans la hauteur totale */
 }
 
-/* Styles pour l'icône TikTok */
+.navbar>* {
+  margin: 0 1vw;
+  /* Ajoute de l'espace entre les éléments */
+}
+
 .tiktok-icon {
-    font-size: 8vw; /* Taille de police responsive en fonction de la largeur de l'écran */
-     border-radius: 50%; /* Pour créer un cercle */
-    padding: 4vw; /* Espace autour de l'icône en fonction de la largeur de l'écran */
-    /* Styles pour rendre l'icône TikTok centrée horizontalement et verticalement */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: red; /* Change la couleur de l'icône en rouge */
-    border: 1px solid black; /* Ajoute un contour noir avec une épaisseur relative */
+  font-size: 8vw;
+  /* Taille de police responsive en fonction de la largeur de l'écran */
+  border-radius: 50%;
+  /* Pour créer un cercle */
+  padding: 2vw;
+  /* Espace autour de l'icône en fonction de la largeur de l'écran */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  /* Change la couleur de l'icône en rouge */
+  border: 1px solid black;
+  /* Ajoute un contour noir avec une épaisseur relative */
 }
 
-
-  @media screen and (max-width: 768px) {
-    .tiktok-icon {
-      font-size: 2.5em; /* Taille de l'icône pour les écrans de petite taille */
-      padding: 1%; /* Réduit l'espace entre le contour et l'icône pour les écrans plus petits */
-    }
+@media screen and (max-width: 768px) {
+  .tiktok-icon {
+    font-size: 2.5em;
+    /* Taille de l'icône pour les écrans de petite taille */
+    padding: 1%;
+    /* Réduit l'espace entre le contour et l'icône pour les écrans plus petits */
   }
-  
+}
+
 
 
 /* Media query pour ajuster la taille de l'icône TikTok sur les petits écrans */
 @media (max-width: 600px) {
-    .tiktok-icon {
-        font-size: 12vw; /* Taille de police plus grande pour les petits écrans */
-        padding: 6vw; /* Espace autour de l'icône pour les petits écrans */
-    }
+  .tiktok-icon {
+    font-size: 12vw;
+    /* Taille de police plus grande pour les petits écrans */
+    padding: 6vw;
+    /* Espace autour de l'icône pour les petits écrans */
+  }
 }

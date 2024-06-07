@@ -1,52 +1,59 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baouly Tiktok APP</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-......" crossorigin="anonymous"> <!-- Lien vers Font Awesome -->
- 
-     <!-- Inclure Bootstrap CSS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baouly Tiktok APP</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha384-......" crossorigin="anonymous"> <!-- Lien vers Font Awesome -->
+
+  <!-- Inclure Bootstrap CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <!-- Inclure Font Awesome pour les icônes -->
- 
-    
-    <link rel="stylesheet" href="css/styles.css"> 
-    <link rel="stylesheet" href="css/recherche.css">
-    <link rel="stylesheet" href="css/menuBas.css">
-    <link rel="stylesheet" href="css/sidebar.css">
-    <link rel="stylesheet" href="css/deconnexion.css">
-    <link rel="stylesheet" href="css/nav.css">
+  <!-- Boxicons CSS -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/recherche.css">
+  <link rel="stylesheet" href="css/menuBas.css">
+  <link rel="stylesheet" href="css/sidebar.css">
+  <link rel="stylesheet" href="css/deconnexion.css">
+  <link rel="stylesheet" href="css/nav.css">
 </head>
+
 <body>
 
-    <nav class="navbar">
+  <nav class="navbar">
     <!-- Icône TikTok dans un cercle avec une bordure noire -->
-  <i class="fab fa-tiktok tiktok-icon"></i>
-        <form id="form" class="search-form">
-            <input type="search" id="query" name="q" placeholder="Search..." oninput="filterLinks()">
-            <div id="message"></div>
-        </form>
-        <i class="search-icon fas fa-search" id="search-icon"></i>
-        
-        
-      </nav>
-      
-  
+    <i class="fab fa-tiktok tiktok-icon"></i>
+    <i class="search-icon fas fa-search" id="search-icon"></i>
+    <form id="form" class="search-form">
+      <input type="search" id="query" name="q" placeholder="Search..." oninput="filterLinks()">
+      <div id="message"></div>
+    </form>
 
+    <div class="navbar_content">
+      <i class="bi bi-grid"></i>
+      <i class='bx bx-sun' id="darkLight"></i>
+      <i class='bx bx-bell'></i>
+    </div>
+
+  </nav>
 
   <!-- Panneau latéral -->
   <nav class="sidebar" id="sidebar">
     <ul class="list-unstyled">
-       <!-- Éléments de la barre latérale avec icônes -->
-       <li class="sidebar-item active">
+      <!-- Éléments de la barre latérale avec icônes -->
+      <li class="sidebar-item active">
         <a href="https://web.facebook.com/" class="text-dark"><i class="fas fa-user"></i> Voir le profil</a>
       </li>
-   
+
 
       <li class="sidebar-item">
         <a href="https://web.facebook.com/" class="text-dark"><i class="fas fa-bell"></i>Notifications</a>
-    </li>
+      </li>
       <li class="sidebar-item">
         <a href="#" class="text-dark"><i class="fas fa-star"></i> Favoris</a>
       </li>
@@ -64,10 +71,10 @@
       </li>
       <li class="sidebar-item">
         <a href="#" class="text-dark" onclick="translate('fr')"><i class="fas fa-language"></i> Français</a>
-    </li>
-    <li class="sidebar-item">
+      </li>
+      <li class="sidebar-item">
         <a href="#" class="text-dark" onclick="translate('en')"><i class="fas fa-language"></i> Anglais</a>
-    </li>
+      </li>
       <li class="sidebar-item">
         <a href="#" class="text-dark"><i class="fas fa-comment"></i> Commentaires et assistance</a>
       </li>
@@ -81,124 +88,136 @@
         <a href="login.html" class="text-dark" id="logout"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
         <!-- Options de confirmation (boutons radio) -->
         <div class="confirmation-options">
-            <label for="confirm-yes"><input type="radio" name="confirmation" id="confirm-yes"> Oui</label>
-            <label for="confirm-no"><input type="radio" name="confirmation" id="confirm-no"> Non</label>
-            <button id="confirm-button">Confirmer</button>
+          <label for="confirm-yes"><input type="radio" name="confirmation" id="confirm-yes"> Oui</label>
+          <label for="confirm-no"><input type="radio" name="confirmation" id="confirm-no"> Non</label>
+          <button id="confirm-button">Confirmer</button>
         </div>
-    </li>
+      </li>
     </ul>
   </nav>
 
- 
-<main>
-  <div class="container-fluid">
-    <div class="video-container">
-    <h2 class="video-title">Titre de la vidéo</h2>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/PdlKhv8Fxt4" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </div>
 
-  <div class="container-fluid">
- <!-- Conteneur pour afficher la vidéo -->
-<div id="video-container">
-  <h2>Titre de la vidéo</h2>
-  <video controls autoplay>
-    <source src="#" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</div>
-</div>
+  <main>
+
+    <blockquote>
+      <p>La véritable science de l'art est la science de la beauté.</p>
+      <footer>- Oscar Wilde</footer>
+    </blockquote>
+
+    <div class="container-fluid">
+      <div class="video-container">
+        <h2 class="video-title">Titre de la vidéo</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/PdlKhv8Fxt4" frameborder="0"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- Conteneur pour afficher la vidéo -->
+    <div class="container-fluid" id="video-container">
+      <h2>Titre de la vidéo</h2>
+      <video controls autoplay>
+        <source src="#" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
 
 
-  <div class="container-fluid">
-    <div class="video-container">
-    <h2 class="video-title">Titre de la vidéo</h2>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/Q03h-dHpDf8" frameborder="0" allowfullscreen></iframe>
+    <div class="container-fluid">
+      <div class="video-container">
+        <h2 class="video-title">Titre de la vidéo</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Q03h-dHpDf8" frameborder="0"
+          allowfullscreen></iframe>
+      </div>
     </div>
-  </div>
-  
-  <div class="container-fluid">
-    <div class="video-container">
-    <h2 class="video-title">Titre de la vidéo</h2>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/mPJ408jcX20" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </div>
-  
-  <div class="container-fluid">
-    <div class="video-container">
-    <h2 class="video-title">Titre de la vidéo</h2>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/TUe1juwq1IE" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </div>
-  
-  <div class="container-fluid">
-    <div class="video-container">
-    <h2 class="video-title">Titre de la vidéo</h2>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/SzU97FvavsY" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </div>
-  
-  <div class="container-fluid">
-    <div class="video-container">
-    <h2 class="video-title">Titre de la vidéo</h2>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/olMyEusUuNY" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </div>
-  
-  <div class="container-fluid">
-    <div class="video-container">
-    <h2 class="video-title">Titre de la vidéo</h2>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/PyptiYTljjA" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </div>
 
-  <div class="container-fluid">
-    <div class="video-container">
-    <h2 class="video-title">Titre de la vidéo</h2>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/Ey8SGtSQ9-M" frameborder="0" allowfullscreen></iframe>
+    <div class="container-fluid">
+      <div class="video-container">
+        <h2 class="video-title">Titre de la vidéo</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/mPJ408jcX20" frameborder="0"
+          allowfullscreen></iframe>
+      </div>
     </div>
-  </div>
 
-  <div class="container-fluid">
-    <div class="video-container">
-    <h2 class="video-title">Titre de la vidéo</h2>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/HyU4qf79RAs" frameborder="0" allowfullscreen></iframe>
+    <div class="container-fluid">
+      <div class="video-container">
+        <h2 class="video-title">Titre de la vidéo</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/TUe1juwq1IE" frameborder="0"
+          allowfullscreen></iframe>
+      </div>
     </div>
-  </div>
-  
- 
-  
-</main>
-    <nav class="bottom-menu">
-        <!-- Icônes du menu bas -->
-        <a href="#" class="menu-item"><i class="fas fa-home"></i>Accueil</a>
 
-            <a href="https://www.tiktok.com/" class="menu-item">
-              <i class="fas fa-compass"></i>
-              Découvrir
-            </a>
+    <div class="container-fluid">
+      <div class="video-container">
+        <h2 class="video-title">Titre de la vidéo</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/SzU97FvavsY" frameborder="0"
+          allowfullscreen></iframe>
+      </div>
+    </div>
 
-            <form id="file-upload-form" style="display: none;">
-                <input type="file" id="file-input" style="display: none;">
-              </form>
-              
-              <a href="#" class="menu-item" onclick="document.getElementById('file-input').click();"><i class="fas fa-plus"></i>Téléverser</a>
-              
+    <div class="container-fluid">
+      <div class="video-container">
+        <h2 class="video-title">Titre de la vidéo</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/olMyEusUuNY" frameborder="0"
+          allowfullscreen></iframe>
+      </div>
+    </div>
 
-            <a href="elconquistadorbaoulyn@gmail.com" class="menu-item">
-              <i class="fas fa-inbox"></i>
-              Boîte de réception
-            </a>
-            <a href="https://elconquistadorbaoulyn-com.onrender.com" class="menu-item"><i class="fas fa-user"></i>Moi</a>
-    </nav>
-    <script src="script/menuBas.js"></script>
-    <script src="script/sidebar.js"></script>
-    <script src="script/script.js"></script> 
-    <script src="script/recherche.js"></script> 
-<!-- Inclure Bootstrap JS (si nécessaire) -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <div class="container-fluid">
+      <div class="video-container">
+        <h2 class="video-title">Titre de la vidéo</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/PyptiYTljjA" frameborder="0"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="video-container">
+        <h2 class="video-title">Titre de la vidéo</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Ey8SGtSQ9-M" frameborder="0"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="video-container">
+        <h2 class="video-title">Titre de la vidéo</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/HyU4qf79RAs" frameborder="0"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+
+  </main>
+  <nav class="bottom-menu">
+    <!-- Icônes du menu bas -->
+    <a href="#" class="menu-item"><i class="fas fa-home"></i>Accueil</a>
+    <a href="" class="menu-item">
+      <i class="fas fa-compass"></i>
+      Découvrir
+    </a>
+
+    <form id="file-upload-form" style="display: none;">
+      <input type="file" id="file-input" style="display: none;">
+    </form>
+
+    <a href="#" class="menu-item" onclick="document.getElementById('file-input').click();"><i
+        class="fas fa-plus"></i>Téléverser</a>
+
+
+    <a href="" class="menu-item">
+      <i class="fas fa-inbox"></i>
+      Boîte de réception
+    </a>
+    <a href="https://elconquistadorbaoulyn-com.onrender.com" class="menu-item"><i class="fas fa-user"></i>Moi</a>
+  </nav>
+  <script src="script/menuBas.js"></script>
+  <script src="script/sidebar.js"></script>
+  <script src="script/script.js"></script>
+  <script src="script/recherche.js"></script>
+  <!-- Inclure Bootstrap JS (si nécessaire) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
+
 </html>

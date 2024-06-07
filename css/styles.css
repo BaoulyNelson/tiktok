@@ -1,78 +1,111 @@
-/* Réinitialisation des marges par défaut */
+/* Réinitialisation des marges par défaut et styles de base */
 body,
 html {
   margin: 0;
   padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
 }
 
 /* Ajustement de la hauteur pour occuper toute la fenêtre */
-html {
-  height: 100%;
-}
-
 body {
-  min-height: 100%; /* Permet de s'assurer que le corps s'étend au moins sur toute la hauteur de la fenêtre */
-  overflow-y: auto; /* Ajoute une barre de défilement verticale si nécessaire */
-  font-family: Arial, sans-serif; /* Choix d'une police par défaut pour le texte */
-  background-color: #f8f8f8; /* Couleur de fond pour le corps */
-  color: #333; /* Couleur de texte par défaut */
+  min-height: 100%;
+  overflow-y: auto;
+  transition: all 0.5s ease;
 }
 
 /* Ajouter un espace en bas de la balise main */
 main {
+  margin-top: 50px; /* Hauteur de la barre de navigation supérieure */
+  padding: 20px;
+  margin-bottom: 50px; /* Hauteur de la barre de navigation inférieure */
+
   margin-bottom: 50px;
   /* Utilisez la même hauteur que celle définie pour le menu de navigation */
 }
 
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
-.video-container {
-  width: 400px; /* Définir la largeur souhaitée */
-  height: 300px; /* Définir la hauteur souhaitée */
-  margin-bottom: 20px; /* Ajouter une marge inférieure pour l'espacement */
-  overflow: hidden; /* Masquer tout contenu débordant de la zone */
- 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-.video-container video,
-.video-container iframe {
-  width: 100%; /* Utiliser toute la largeur du conteneur */
-  height: 100%; /* Utiliser toute la hauteur du conteneur */
+:root {
+  --white-color: #fff;
+  --blue-color: #4070f4;
+  --grey-color: #707070;
+  --grey-color-light: #aaa;
 }
 
-.container-fluid {
+body.dark {
+  background-color: #333;
+  --white-color: #333;
+  --blue-color: #fff;
+  --grey-color: #f2f2f2;
+  --grey-color-light: #aaa;
+}
+
+
+.navbar_content {
   display: flex;
-  justify-content: center;
-  /* Aligner horizontalement */
   align-items: center;
-  /* Aligner verticalement */
-  height: 100vh;
-  /* Hauteur de l'écran */
+  column-gap: 25px;
+}
+
+.navbar_content i {
+  cursor: pointer;
+  font-size: 20px;
+  color: var(--grey-color);
+}
+.container-fluid {
+  padding: 20px;
+  display: flex;
+  justify-content: center; /* Centre le conteneur principal */
 }
 
 .video-container {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 560px; /* Limite la largeur maximale des vidéos */
+  margin-top: 20px; /* Ajustez la marge selon vos besoins */
 }
 
 .video-title {
-  margin-top: 10px; /* Ajoute un peu d'espace entre la vidéo et le titre */
-  font-size: 24px; /* Taille de la police */
-  color: #333; /* Couleur du texte */
-  text-align: center; /* Centrer le texte horizontalement */
-  margin-bottom: 20px; /* Espace en bas du titre */
-  
+  margin-bottom: 15px; /* Ajustez l'espace entre le titre et la vidéo */
+  text-align: center;  /* Centrez le texte si nécessaire */
+  font-size: 24px;     /* Ajustez la taille de la police selon vos besoins */
+}
+
+iframe {
+  width: 100%;
+  height: auto; /* Maintient le ratio d'aspect */
+  aspect-ratio: 16 / 9; /* Assure que l'iframe maintient un ratio de 16:9 */
 }
 
 #video-container {
-  display: none;
-  text-align: center;
-  width: 400px; /* Définir la largeur souhaitée */
-  height: 300px; /* Définir la hauteur souhaitée */
-  margin-bottom: 20px; /* Ajouter une marge inférieure pour l'espacement */
-  overflow: hidden; /* Masquer tout contenu débordant de la zone */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 560px; /* Limite la largeur maximale des vidéos */
+  margin-top: 20px; /* Ajustez la marge selon vos besoins */
 }
 
-video {
-  width: 100%; /* Utiliser toute la largeur du conteneur */
-  height: 100%; /* Utiliser toute la hauteur du conteneur */
-  display: inline-block;
+#video-container h2 {
+  margin-bottom: 15px; /* Ajustez l'espace entre le titre et la vidéo */
+  text-align: center;  /* Centrez le texte si nécessaire */
+  font-size: 24px;     /* Ajustez la taille de la police selon vos besoins */
+}
+
+#video-container video {
+  width: 100%;
+  height: auto; /* Maintient le ratio d'aspect */
 }
