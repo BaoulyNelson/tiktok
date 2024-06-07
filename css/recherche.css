@@ -1,88 +1,42 @@
-/* Styles de base */
-form {    
-    width: 100%; /* Utilisez 100% de la largeur disponible */
-    max-width: 300px; /* Largeur maximale pour éviter l'étirement excessif */
-    margin: 0 auto; /* Centrer le formulaire horizontalement */
-    padding: 10px; /* Ajouter de l'espace intérieur pour un meilleur espacement */
-    box-sizing: border-box; /* Inclure le padding dans le calcul de la largeur */
-}
 
-input {
-    all: unset;
-    font: 16px system-ui;
-    color: black;
-    width: 100%; /* Utiliser toute la largeur disponible */
-    padding: 12px 20px; /* Espacement interne ajusté */
-    border-radius: 25px;
-    outline: none;
-    background-color: var(--white-color);
-    border: 1px solid var(--grey-color-light);
-    box-sizing: border-box; /* Inclure le padding dans le calcul de la largeur */
-}
+/* Styliser l'icône de recherche */
+.search-icon {
+    color: #000; /* Couleur de l'icône */
+    cursor: pointer; /* Curseur en forme de main */
+    margin-right: 10px; /* Espacement à droite */
+    font-weight: bold;
+  }
+  
+  /* Masquer le formulaire de recherche par défaut */
+  .hidden {
+    display: none;
+  }
+  
+  /* Styliser le formulaire de recherche */
+  .search-form {
+    display: flex; /* Disposer les éléments en ligne */
+    align-items: center; /* Aligner verticalement les éléments */
+    padding: 5px; /* Padding interne */
+    border-radius: 5px; /* Bords arrondis */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre */
+  }
 
-/* Media queries pour rendre le formulaire plus adaptatif */
-@media (max-width: 600px) {
-    /* Pour les écrans plus petits, ajuster la largeur du formulaire */
-    form {
-        max-width: 50%; /* Utiliser toute la largeur disponible */
-    }
-}
-
-#message{
-    color: black;
-    bottom: 0;
-    left: 0; /* Ajustez si nécessaire pour le positionnement horizontal */
-    text-align: center; /* Centre le texte horizontalement */
-
-}
-
-
-::placeholder {
-    color: black;
-    opacity: 0.7; 
-}
-
-/* Style pour les grands écrans */
-@media screen and (min-width: 769px) {
-    .search-form {
-        display: block; /* Affiche le formulaire de recherche */
-    }
-    
-    .search-icon {
-        display: none; /* Masque l'icône de recherche */
-    }
-}
-
-/* Style pour les petits écrans */
-@media screen and (max-width: 768px) {
-    .search-form {
-        display: none; /* Masque le formulaire de recherche */
-    }
-    
-    .search-icon {
-        display: inline-block; /* Affiche l'icône de recherche */
-        cursor: pointer; /* Curseur pointer pour indiquer que l'icône est cliquable */
-        text-align: center; /* Centre l'icône horizontalement */
-    }
-
- 
-}
-   /* Style pour l'icône de recherche */
-   .search-icon {
-    justify-content: center; /* Centrage horizontal */
-    align-items: center; /* Centrage vertical */
-    text-align: center;
-    font-size: 24px; /* Taille de la police de l'icône */
-    color: #333; /* Couleur de l'icône */
-    transition: color 0.3s ease; /* Transition fluide de la couleur */
-}
-
-/* Style pour l'icône de recherche au survol */
-.search-icon:hover {
-    color: #007bff; /* Couleur de l'icône au survol */
-}
-
-
-
-
-
+/* Styliser le champ de recherche */
+#query {
+    color: red;
+    background-color: black; /* Couleur de fond */
+    padding: 5px; /* Padding interne */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Bords arrondis */
+    outline: none; /* Pas de contour */
+    font-size: 16px; /* Taille du texte */
+  }
+  
+  
+/* Message de retour */
+#message {
+    background: white;
+    margin-top: 10px; /* Espacement en haut */
+    font-size: 14px; /* Taille du texte */
+    color: red; /* Couleur du texte */
+  }

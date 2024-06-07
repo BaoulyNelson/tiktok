@@ -1,35 +1,36 @@
-
-/* Styles pour le conteneur du menu */
 .bottom-menu {
-  position: fixed;
+  position: fixed; /* Fixer la barre de navigation en bas de la fenêtre */
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 60px; /* Hauteur fixe du menu de navigation en bas */
   border-top: 1px solid whitesmoke;
   display: flex;
   justify-content: space-around;
   padding: 10px 0; /* Ajustement de l'espacement pour les petits écrans */
-  z-index: 1000;
-  /* overflow-x: hidden; */
+  z-index: 2;
   background-color: var(--white-color);
   align-items: center;
   box-shadow: 0 0 2px var(--grey-color-light);
 }
 
-
-/* Styles pour les éléments du menu */
 .menu-item {
-  color: black;
-  text-decoration: none;
-  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none; /* Retire le soulignement des liens */
+  color: black; /* Couleur du texte par défaut */
+  margin: 10px 10px 0; /* Espacement entre les éléments (haut, gauche/droite, bas) */
+  border-radius: 5px; /* Arrondir les coins des éléments */
+  transition: all 0.3s ease; /* Ajoute une transition pour tous les changements */
+  position: relative; /* Pour positionner le pseudo-élément */
+  overflow: hidden; /* Cache les débordements pour les animations */
   text-align: center;
-  padding: 8px 10px; /* Espacement des éléments */
+  flex: 1; /* Chaque élément prend un espace égal */
   display: flex;
-  flex-direction: column; /* Affichage en colonne sur les petits écrans */
+  flex-direction: column;
   align-items: center;
-
+  white-space: nowrap; /* Empêche le retour à la ligne */
 }
+
+
 
 .menu-item i {
   display: block;
@@ -54,17 +55,6 @@
   }
 }
 
-.bottom-menu a {
-  font-weight: bold;
-  text-decoration: none; /* Retire le soulignement des liens */
-  color: black; /* Couleur du texte par défaut */
-  margin: 0 15px; /* Espacement entre les éléments */
-  padding: 10px 20px; /* Espacement interne des éléments */
-  border-radius: 5px; /* Arrondir les coins des éléments */
-  transition: all 0.3s ease; /* Ajoute une transition pour tous les changements */
-  position: relative; /* Pour positionner le pseudo-élément */
-  overflow: hidden; /* Cache les débordements pour les animations */
-}
 
 .bottom-menu a:hover {
   color: #fff; /* Couleur du texte au survol */

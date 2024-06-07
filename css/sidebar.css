@@ -31,13 +31,17 @@
   text-decoration: none;
   color: black;
   transition: color 0.3s ease;
-  display: block;
+  display: flex; /* Utilisation de flexbox pour l'espacement */
+  align-items: center; /* Centrer verticalement l'icône et le texte */
+
 }
 
 .sidebar-item a:hover {
   color: #ffffff;
 }
-
+.sidebar-item i {
+  margin-right: 10px; /* Ajoute de l'espace entre l'icône et le texte */
+}
   
   /* Media query pour les écrans de taille moyenne à grande */
   @media screen and (min-width: 768px) {
@@ -60,7 +64,12 @@
     }
   }
   
-  
+  /* Media query pour les petits écrans */
+@media (max-width: 768px) {
+  .sidebar-item i {
+    margin-right: 15px; /* Augmente l'espace entre l'icône et le texte sur les petits écrans */
+  }
+}
   .sidebar.show {
     left: 0;
     /* Afficher le panneau latéral lorsque la classe "show" est ajoutée */

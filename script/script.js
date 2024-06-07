@@ -52,19 +52,19 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-var lastScrollTop = 0;
+// var lastScrollTop = 0;
 
-window.addEventListener("scroll", function () {
-    var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+// window.addEventListener("scroll", function () {
+//     var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-    if (currentScroll > lastScrollTop) {
-        // Scroll vers le bas
-        document.querySelector('.bottom-menu').style.transform = 'translateY(100%)';
-    } else {
-        // Scroll vers le haut
-        document.querySelector('.bottom-menu').style.transform = 'translateY(0)';
-    }
+//     if (currentScroll > lastScrollTop) {
+//         // Scroll vers le bas
+//         document.querySelector('.bottom-menu').style.transform = 'translateY(100%)';
+//     } else {
+//         // Scroll vers le haut
+//         document.querySelector('.bottom-menu').style.transform = 'translateY(0)';
+//     }
 
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Pour prendre en compte le défilement vers le haut
-}, false);
+//     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Pour prendre en compte le défilement vers le haut
+// }, false);
 

@@ -1,29 +1,15 @@
-/* Réinitialisation des marges par défaut et styles de base */
-body,
-html {
+body {
   margin: 0;
   padding: 0;
-  height: 100%;
   font-family: Arial, sans-serif;
-  background-color: #f8f8f8;
-  color: #333;
-}
-
-/* Ajustement de la hauteur pour occuper toute la fenêtre */
-body {
-  min-height: 100%;
-  overflow-y: auto;
-  transition: all 0.5s ease;
+  background-color: #f4f4f4;
 }
 
 /* Ajouter un espace en bas de la balise main */
 main {
   margin-top: 50px; /* Hauteur de la barre de navigation supérieure */
-  padding: 20px;
-  margin-bottom: 50px; /* Hauteur de la barre de navigation inférieure */
+  margin-bottom: 100px; /* Hauteur de la barre de navigation inférieure */
 
-  margin-bottom: 50px;
-  /* Utilisez la même hauteur que celle définie pour le menu de navigation */
 }
 
 /* Import Google font - Poppins */
@@ -79,10 +65,14 @@ body.dark {
 }
 
 .video-title {
-  margin-bottom: 15px; /* Ajustez l'espace entre le titre et la vidéo */
+  margin-bottom: 10px; /* Ajustez l'espace entre le titre et la vidéo */
   text-align: center;  /* Centrez le texte si nécessaire */
   font-size: 24px;     /* Ajustez la taille de la police selon vos besoins */
+  background-color: #227dea; /* Couleur de fond pour les titres */
+  padding: 10px;      /* Ajoute du padding pour rendre le fond plus visible */
+  border-radius: 5px; /* Ajoute des coins arrondis à l'arrière-plan */
 }
+
 
 iframe {
   width: 100%;
